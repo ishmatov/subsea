@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 140" fill="none" stroke="#0c4a6e" stroke-width="1.5">
+  <!-- Water surface -->
+  <path d="M0 12 Q40 8 80 12 Q120 16 160 12 L160 20 L0 20 Z" fill="#0ea5e9" opacity="0.2"/>
+  <!-- FPSO at surface -->
+  <path d="M50 5 L120 5 L122 18 L48 18 Z" fill="#1e3a5f" stroke="#0ea5e9"/>
+  <rect x="65" y="0" width="20" height="8" rx="1" fill="#334155"/>
+  <!-- Risers / flowlines descending -->
+  <path d="M70 18 L70 95 L55 95" stroke="#64748b" stroke-width="2"/>
+  <path d="M90 18 L90 95 L105 95" stroke="#64748b" stroke-width="2"/>
+  <path d="M55 95 L50 115 M105 95 L110 115" stroke="#0ea5e9" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <!-- Seafloor / depth zone -->
+  <line x1="0" y1="120" x2="160" y2="120" stroke="#334155" stroke-width="2"/>
+  <rect x="0" y="120" width="160" height="20" fill="#1e293b" opacity="0.3"/>
+  <!-- Subsea trees and manifold on seabed -->
+  <rect x="35" y="108" width="22" height="16" rx="2" fill="#0ea5e9" stroke="#0284c7"/>
+  <rect x="68" y="108" width="24" height="16" rx="2" fill="#0ea5e9" stroke="#0284c7"/>
+  <rect x="103" y="108" width="22" height="16" rx="2" fill="#0ea5e9" stroke="#0284c7"/>
+  <!-- Manifold connection -->
+  <rect x="45" y="112" width="70" height="8" rx="1" fill="#64748b"/>
+  <!-- Depth indicator -->
+  <path d="M130 25 L135 25 L135 115" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="133" y1="25" x2="137" y2="25"/>
+  <line x1="133" y1="115" x2="137" y2="115"/>
+</svg>

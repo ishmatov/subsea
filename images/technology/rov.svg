@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120" fill="none" stroke="#0c4a6e" stroke-width="1.5">
+  <!-- Корпус -->
+  <ellipse cx="50" cy="85" rx="32" ry="12" fill="#1e3a5f" stroke="#0ea5e9"/>
+  <rect x="28" y="45" width="44" height="42" rx="6" fill="#1e3a5f"/>
+  <!-- Камера/фонарь -->
+  <circle cx="50" cy="58" r="8" fill="#0ea5e9"/>
+  <circle cx="50" cy="58" r="4" fill="#7dd3fc"/>
+  <!-- Манипулятор -->
+  <path d="M70 70 L85 75 L88 85" stroke="#64748b" stroke-width="4" stroke-linecap="round"/>
+  <path d="M30 75 L15 78 L12 88" stroke="#64748b" stroke-width="4" stroke-linecap="round"/>
+  <!-- Движители -->
+  <rect x="25" y="80" width="12" height="8" rx="1" fill="#475569"/>
+  <rect x="63" y="80" width="12" height="8" rx="1" fill="#475569"/>
+  <!-- Трос -->
+  <path d="M50 45 L50 20" stroke="#94a3b8" stroke-width="2"/>
+  <path d="M45 15 L55 15" stroke="#94a3b8" stroke-width="1"/>
+</svg>
