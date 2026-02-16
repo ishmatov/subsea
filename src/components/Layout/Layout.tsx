@@ -20,7 +20,7 @@ export function Layout() {
   const [cumulativeBarrels, setCumulativeBarrels] = useState(0);
 
   useEffect(() => {
-    fetch('/data/production_timeseries.json')
+    fetch(`${import.meta.env.BASE_URL}data/production_timeseries.json`)
       .then(r => r.json())
       .then((j: { byYear: { year: number; total: number; forecast?: boolean }[] }) => {
         const recent = j.byYear.filter((r: { forecast?: boolean }) => !r.forecast).slice(-3);

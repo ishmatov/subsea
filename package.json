@@ -1,12 +1,12 @@
 {
-  "name": "subsea_project",
+  "name": "subsea",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build && node -e \"require('fs').copyFileSync('dist/index.html','dist/404.html')\"",
-    "build:gh": "vite build --base=/subsea_project/ && node -e \"require('fs').copyFileSync('dist/index.html','dist/404.html')\"",
+    "build:gh": "vite build --base=/subsea/ && node -e \"require('fs').copyFileSync('dist/index.html','dist/404.html')\"",
     "deploy": "npm run build:gh && npx gh-pages -d dist",
     "lint": "eslint .",
     "preview": "vite preview"

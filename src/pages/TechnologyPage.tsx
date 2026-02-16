@@ -8,7 +8,7 @@ export function TechnologyPage() {
   const [terms, setTerms] = useState<GlossaryTerm[]>([]);
 
   useEffect(() => {
-    fetch('/data/glossary.json')
+    fetch(`${import.meta.env.BASE_URL}data/glossary.json`)
       .then(r => r.json())
       .then((json: { terms: GlossaryTerm[] }) => {
         const filtered = json.terms.filter((t: GlossaryTerm) => termIds.includes(t.id));
@@ -34,7 +34,7 @@ export function TechnologyPage() {
             >
               <div className="shrink-0 w-full sm:w-40 h-32 sm:h-36 flex items-center justify-center bg-slate-50 rounded-lg overflow-hidden">
                 <img
-                  src={`/images/technology/${t.id}.svg`}
+                  src={`./images/technology/${t.id}.svg`}
                   alt={`Схема: ${t.term}`}
                   className="max-w-full max-h-full object-contain p-2"
                 />

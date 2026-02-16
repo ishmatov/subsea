@@ -28,16 +28,17 @@ npm run build
 
 ## Деплой на GitHub Pages
 
-1. Создайте репозиторий (например, `subsea_project`)
+1. Создайте репозиторий (например, `subsea`)
 2. Выполните:
 ```bash
 npm run deploy
 ```
-Скрипт соберёт проект с `base: '/subsea_project/'` и загрузит в ветку `gh-pages`.
+Скрипт соберёт проект с `base: '/subsea/'` и загрузит в ветку `gh-pages`.
 
 3. В настройках репозитория: Settings → Pages → Source: Deploy from a branch → Branch: gh-pages, folder: / (root)
 
-Сайт будет доступен по адресу: `https://<username>.github.io/subsea_project/`
+Сайт будет доступен по адресу: `https://<username>.github.io/subsea/`  
+Маршруты работают через хэш (HashRouter): главная — `...#/`, карта — `...#/map` и т.д. Сервер всегда отдаёт один `index.html`, роутинг на клиенте.
 
 ## Структура данных
 

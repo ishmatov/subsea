@@ -19,7 +19,7 @@ export function ChartsPage() {
   const [data, setData] = useState<ProductionData | null>(null);
 
   useEffect(() => {
-    fetch('/data/production_timeseries.json')
+    fetch(`${import.meta.env.BASE_URL}data/production_timeseries.json`)
       .then(r => r.json())
       .then((json: { byYear: ProductionByYear[]; byRegion: ProductionByRegion[]; byStatus: ProductionByStatus[]; byType: ProductionByType[] }) =>
         setData({

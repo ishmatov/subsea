@@ -7,7 +7,7 @@ export function MapPage() {
   const [data, setData] = useState<GeoJsonFields | null>(null);
 
   useEffect(() => {
-    fetch('/data/fields.geojson')
+    fetch(`${import.meta.env.BASE_URL}data/fields.geojson`)
       .then(r => r.json())
       .then(setData)
       .catch(console.error);

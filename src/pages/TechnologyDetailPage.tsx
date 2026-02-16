@@ -8,7 +8,7 @@ export function TechnologyDetailPage() {
   const [allTerms, setAllTerms] = useState<GlossaryTerm[]>([]);
 
   useEffect(() => {
-    fetch('/data/glossary.json')
+    fetch(`${import.meta.env.BASE_URL}data/glossary.json`)
       .then(r => r.json())
       .then((json: { terms: GlossaryTerm[] }) => {
         setAllTerms(json.terms);
@@ -58,7 +58,7 @@ export function TechnologyDetailPage() {
             <div className="md:col-span-1">
               <div className="w-full aspect-square max-w-xs mx-auto md:mx-0 bg-slate-50 rounded-lg flex items-center justify-center overflow-hidden">
                 <img
-                  src={`/images/technology/${term.id}.svg`}
+                  src={`./images/technology/${term.id}.svg`}
                   alt={`Схема: ${term.term}`}
                   className="max-w-full max-h-full object-contain p-4"
                 />

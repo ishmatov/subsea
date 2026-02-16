@@ -18,7 +18,7 @@ export function ProspectsDetailPage() {
   const [allTrends, setAllTrends] = useState<ProspectTrend[]>([]);
 
   useEffect(() => {
-    fetch('/data/prospects.json')
+    fetch(`${import.meta.env.BASE_URL}data/prospects.json`)
       .then(r => r.json())
       .then((json: { trends: ProspectTrend[] }) => {
         setAllTrends(json.trends);
@@ -62,7 +62,7 @@ export function ProspectsDetailPage() {
       <article className="bg-white rounded-xl shadow-md overflow-hidden">
         {trend.image && (
           <div className="w-full h-48 sm:h-64 bg-slate-100">
-            <img src={trend.image} alt="" className="w-full h-full object-contain p-4" />
+            <img src={`./${trend.image.replace(/^\//, '')}`} alt="" className="w-full h-full object-contain p-4" />
           </div>
         )}
         <div className="p-6 md:p-8">

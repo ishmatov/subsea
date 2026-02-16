@@ -14,7 +14,7 @@ export function ProspectsPage() {
   const [limitations, setLimitations] = useState<string[]>([]);
 
   useEffect(() => {
-    fetch('/data/prospects.json')
+    fetch(`${import.meta.env.BASE_URL}data/prospects.json`)
       .then(r => r.json())
       .then((json: { trends: ProspectTrend[]; limitations?: string[] }) => {
         setTrends(json.trends);
@@ -45,7 +45,7 @@ export function ProspectsPage() {
             >
               {t.image && (
                 <div className="flex-shrink-0 w-24 h-24 rounded-lg overflow-hidden bg-slate-100">
-                  <img src={t.image} alt="" className="w-full h-full object-contain p-1" />
+                  <img src={`./${t.image.replace(/^\//, '')}`} alt="" className="w-full h-full object-contain p-1" />
                 </div>
               )}
               <div className="min-w-0 flex-1">

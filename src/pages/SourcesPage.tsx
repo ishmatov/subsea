@@ -10,7 +10,7 @@ export function SourcesPage() {
   const [data, setData] = useState<SourcesData | null>(null);
 
   useEffect(() => {
-    fetch('/data/sources.json')
+    fetch(`${import.meta.env.BASE_URL}data/sources.json`)
       .then(r => r.json())
       .then(setData)
       .catch(console.error);
